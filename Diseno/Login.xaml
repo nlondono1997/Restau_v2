@@ -1,0 +1,20 @@
+﻿<mah:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:Diseno"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Name="mtrwLogin" x:Class="Diseno.Login"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800" Closed="MetroWindow_Closed" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFA69770">
+        <TextBox x:Name="TxtUsuario" Height="50" Margin="211,158,207.6,212" TextWrapping="Wrap" VerticalAlignment="Center" Width="375" mah:TextBoxHelper.Watermark="Usuario" VerticalContentAlignment="Center" mah:ValidationHelper.CloseOnMouseLeftButtonDown="True" HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Center"/>
+        <TextBox x:Name="TxtContrasena" HorizontalAlignment="Center" Height="50" Margin="211,233,207.6,137" TextWrapping="Wrap" VerticalAlignment="Center" Width="375" mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True" mah:TextBoxHelper.Watermark="Contraseña" VerticalContentAlignment="Center"/>
+        <Button x:Name="BtnAcceder" Content="Acceder" HorizontalAlignment="Center" Height="58" Margin="211,338,207.6,24" VerticalAlignment="Center" Width="375" FontSize="15" Click="BtnAcceder_Click"/>
+        <Label x:Name="LblError" Content="Mensaje de error" HorizontalAlignment="Center" Height="40" Margin="254,300,253.6,80" VerticalAlignment="Center" Width="286" FontSize="14" FontWeight="Bold" Foreground="#FF533D3D"/>
+        <mah:TransitioningContentControl Content="TransitioningContentControl" HorizontalAlignment="Left" Margin="235,-19,0,0" VerticalAlignment="Top"/>
+        <Image Height="93" Margin="332,27,331.6,300" VerticalAlignment="Center" Width="130" Source="Imagenes/Login.png"/>
+
+    </Grid>
+</mah:MetroWindow>

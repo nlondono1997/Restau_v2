@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using Capa_Transversal;
+using System.ComponentModel; // CancelEventArgs
+using Diseno.Properties;
+using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Types;
+using MahApps.Metro.Behaviors;
+using MahApps.Metro.Controls;
+using MahApps.Metro.Theming;
+
+
+namespace Diseno
+{
+    /// <summary>
+    /// Lógica de interacción para Pantalla_Principal.xaml
+    /// </summary>
+    public partial class Pantalla_Principal : MetroWindow
+    {
+        public Pantalla_Principal()
+        {
+            InitializeComponent();
+            InformacionUsuario();
+        }
+
+        private void InformacionUsuario()
+        {
+            LblNombre.Content = CacheInicioSesion.Nombre;
+            LblRol.Content = CacheInicioSesion.Rol;
+            LblCorreo.Content = CacheInicioSesion.Email;
+  
+        }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Pantalla_Principal principal = new Pantalla_Principal();
+            if (MessageBox.Show("¿Estas seguro de cerrar sesion?", "Cierre de Sesion", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                this.Close();
+        }
+
+
+
+        private void dtLista_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+}
